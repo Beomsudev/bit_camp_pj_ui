@@ -1,8 +1,10 @@
-import React from "react"
+import React from 'react'
 import './table.style.css'
-
-const Item = () => <>
-    <h1> [아이템] </h1>
-</>
+import {ItemMenu as Menu} from '../components'
+const Item = ({children}) => (<>
+    <h1>Item</h1>
+    <Menu/>
+    {children}
+</>)
 
 export default Item

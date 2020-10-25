@@ -22,7 +22,10 @@
     "react-scripts": "^3.4.3",
     "react-simple-chatbot": "^0.6.1",
     "redux": "^4.0.5",
-    "styled-components": "^5.1.1"
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1",
+    "throttle-debounce": "^2.3.0",
+    "thunk": "^0.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,8 +56,6 @@
     "@types/react-redux": "^7.1.9",
     "@types/redux": "^3.6.0",
     "ts-node": "^8.10.2",
-    "typescript": "^3.7.5",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6"
+    "typescript": "^3.7.5"
   }
 }

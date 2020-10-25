@@ -1,19 +1,19 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 
-const UserRegister = () => {
-    const [userid, setUserid] = useState()
-    const [password, setPassword] = useState()
-    const [name, setName] = useState()
-    const [pclass, setPclass] = useState()
-    const [gender, setGender] = useState()
-    const [birthYear, setBirthYear] = useState()
-    const [embarked, setEmbarked] = useState()
+const MovieRegister = () => {
+    const [movieid, setMovieid] = useState()
+    const [title, setTitle] = useState()
+    const [subtitle, setSubTitle] = useState()
+    const [description, setDescription] = useState()
+    const [imageurl, setImageUrl] = useState()
+    const [year, setYear] = useState()
+    const [rating, setRating] = useState()
 
     const register = e => {
         e.preventDefault()
-        axios.post(`http:localhost:8080/user/register`,  {
-            userid,password,name,pclass,gender,birthYear,embarked
+        axios.post(`http:localhost:8080/movie/register`,  {
+            movieid,title,subtitle,description,imageurl,year,rating
         })
         .then(
             console.log(`signup SUCCESS`)
@@ -26,36 +26,36 @@ const UserRegister = () => {
 
     
     return (<>
-        <h1>UserRegister</h1><form>
+        <h1>MovieRegister</h1><form>
         <table className='tab_layer'>
             
                 <tr>
                     <td>ID</td>
-                    <td><input type="text" onChange={e => setUserid(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setMovieid(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td>PASSWORD</td>
-                    <td><input type="text" onChange={e => setPassword(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setTitle(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td>NAME</td>
-                    <td><input type="text" onChange={e => setName(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setSubTitle(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td>PCLASS</td>
-                    <td><input type="text" onChange={e => setPclass(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setDescription(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td>GENDER</td>
-                    <td><input type="text" onChange={e => setGender(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setImageUrl(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td>BIRTH YEAR</td>
-                    <td><input type="text" onChange={e => setBirthYear(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setYear(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td>EMBARKED</td>
-                    <td><input type="text" onChange={e => setEmbarked(e.target.value)}/></td>
+                    <td><input type="text" onChange={e => setRating(e.target.value)}/></td>
                 </tr>
                 {/* <tr>
                     <td>RANK</td> 
@@ -70,4 +70,4 @@ const UserRegister = () => {
     </>)
 }
 
-export default UserRegister
+export default MovieRegister
