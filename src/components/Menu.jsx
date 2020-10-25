@@ -28,6 +28,14 @@ export const ItemMenu = () => (<nav>
     </ol>
 </nav>)
 
+export const MovieMenu = () => (<nav>
+    <ol>
+        <li><Link to='/moviedetail'>Movie</Link></li>
+        <li><Link to='/modify-movie'>Modify Movie</Link></li>
+        <li><Link to='/remove-movie'>Remove Movie</Link></li>
+        <li><Link to='/movielist'>Movie List</Link></li>
+    </ol>
+</nav>)
 export const AuthMenu = () => (<nav>
     <ol>
         <li><Link to='/signup-form'>Siginup Form</Link></li>

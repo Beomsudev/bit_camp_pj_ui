@@ -1,5 +1,4 @@
 export {default as MovieDetail} from './MovieDetail'
-export {default as MovieLogin} from './MovieLogin'
 export {default as MovieModify} from './MovieModify'
 export {default as MovieRegister} from './MovieRegister'
 export {default as MovieWithdrawal} from './MovieWithdrawal'

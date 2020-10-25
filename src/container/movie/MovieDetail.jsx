@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import {User} from '../../templates'
+import {Movie} from '../../templates'
 import axios from 'axios'
-const UserDetail = () => {
+const MovieDetail = () => {
     const detail = e => {
         e.preventDefault()
-        axios.get(`http:localhost:8080/user/detail`)
+        axios.get(`http:localhost:8080/movie/detail`)
         .then(
 
         )
@@ -13,41 +13,37 @@ const UserDetail = () => {
         )
 
     }
-    return (<User>
-        <h1>UserDetail</h1>
+    return (<Movie>
+        <h1>MovieDetail</h1>
         <form>
         <table className='tab_layer'>
             
                 <tr>
-                    <td>ID</td>
+                    <td>MOVIEID</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
-                    <td>PASSWORD</td>
+                    <td>TITLE</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
-                    <td>NAME</td>
+                    <td>SUBTITLE</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>PCLASS</td>
+                    <td>DESCRIPTION</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
-                    <td>GENDER</td>
+                    <td>IMAGEURL</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>BIRTH YEAR</td>
+                    <td>YEAR</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>EMBARKED</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td>RANK</td>
+                    <td>RATING</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
@@ -55,7 +51,7 @@ const UserDetail = () => {
                     <button>취소</button></td>
                 </tr>
         </table></form>
-    </User>)
+    </Movie>)
 }
 
-export default UserDetail
+export default MovieDetail

@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import {User} from '../../templates'
+import {Movie} from '../../templates'
 import axios from 'axios'
-const UserModify = () => {
+const MovieModify = () => {
     const [password, setPassword] = useState()
     const modify = e => {
         e.preventDefault()
-        axios.get(`http:localhost:8080/user/modify`)
+        axios.get(`http:localhost:8080/movie/modify`)
         .then(
 
         )
@@ -14,12 +14,12 @@ const UserModify = () => {
         )
 
     }
-    return (<User>
-        <h1>UserModify</h1> <form>
+    return (<Movie>
+        <h1>MovieModify</h1> <form>
         <table className='tab_layer'>
            
                 <tr>
-                    <td>ID</td>
+                    <td>MOVIEID</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
@@ -27,27 +27,27 @@ const UserModify = () => {
                     <td><input type="text" onChange={e => setPassword(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>NAME</td>
+                    <td>TITLE</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>PCLASS</td>
+                    <td>SUBTITLE</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
-                    <td>GENDER</td>
+                    <td>DESCRIPTION</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>BIRTH YEAR</td>
+                    <td>IMAGEURL</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>EMBARKED</td>
+                    <td>YEAR</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>RANK</td>
+                    <td>RATING</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
@@ -56,7 +56,7 @@ const UserModify = () => {
                 </tr>
            
         </table> </form>
-    </User>)
+    </Movie>)
 }
 
-export default UserModify
+export default MovieModify

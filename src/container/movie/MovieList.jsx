@@ -1,11 +1,11 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios'
-import {User} from '../../templates'
+import {Movie} from '../../templates'
 
-const UserList = () => {
+const MovieList = () => {
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/users`)
+        axios.get(`http://localhost:8080/api/movies`)
         .then(res=>{
             alert(`List Success`)
             setData(res.data)
@@ -17,34 +17,34 @@ const UserList = () => {
 
     },[])
     
-    return (<User>
+    return (<Movie>
   
         <table>
-            <h1>User List</h1>
+            <h1>Movie List</h1>
             <tr>
-                <th>userid</th>
-                <th>name</th>
-                <th>pclass</th>
-                <th>gender</th>
-                <th>age_group</th>
-                <th>embarked</th>
-                <th>rank</th>
+                <th>movieid</th>
+                <th>title</th>
+                <th>subtitle</th>
+                <th>description</th>
+                <th>imageurl</th>
+                <th>year</th>
+                <th>rating</th>
             </tr>
             {data.map((i, index)=>(
                 <tr key={index}>
-                <td>{i.userid}</td>
-                <td>{i.name}</td>
-                <td>{i.pclass}</td>
-                <td>{i.gender}</td>
-                <td>{i.age_group}</td>
-                <td>{i.embarked}</td>
-                <td>{i.rank}</td>
+                <td>{i.movieid}</td>
+                <td>{i.title}</td>
+                <td>{i.subtitle}</td>
+                <td>{i.description}</td>
+                <td>{i.imageurl}</td>
+                <td>{i.year}</td>
+                <td>{i.rating}</td>
             </tr>
             ))}
             
         </table>
 
-    </User>)
+    </Movie>)
 }
 
-export default UserList
+export default MovieList
