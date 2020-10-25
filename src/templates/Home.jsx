@@ -1,7 +1,8 @@
 import React from "react"
+import './table.style.css'
 
 const Home = () => <>
-    <h1> [홈홈] </h1>
+    <h1> [홈] </h1>
 </>
 
 export default Home

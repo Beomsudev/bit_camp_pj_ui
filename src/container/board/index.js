@@ -1,0 +1,5 @@
+export {default as BoardMenu} from '../../components/BoardMenu'
+export {default as BoardRegister} from './BoardRegister'
+export {default as BoardRead} from './BoardRead'
+export {default as BoardUpdate} from './BoardUpdate'
+export {default as BoardRemove} from './BoardRemove'
