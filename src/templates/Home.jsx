@@ -4,8 +4,7 @@ import './home.style.css'
 
 import {ItemChatBot} from "../container/item"
 import axios from 'axios'
-import { ImageBackground } from "react-native"
-import homeimg from './images/tenet2.jpg';
+
 
 export default function Home(props){ 
     const test = () => {
@@ -21,7 +20,6 @@ export default function Home(props){
     return(<>
            <table className='tab_layer'><tr><td><h1>Home</h1></td></tr>
             <tr><td><button onClick={test}>Connection Test</button></td></tr></table>
-            <ImageBackground  src={ homeimg } width='1800' height='1000' />
 
             <ItemChatBot/>    
             </>)
