@@ -4,9 +4,9 @@ import axios from 'axios'
 const MovieRegister = () => {
     const [movieid, setMovieid] = useState()
     const [title, setTitle] = useState()
-    const [subtitle, setSubTitle] = useState()
+    const [subtitle, setSubtitle] = useState()
     const [description, setDescription] = useState()
-    const [imageurl, setImageUrl] = useState()
+    const [imageurl, setImageurl] = useState()
     const [year, setYear] = useState()
     const [rating, setRating] = useState()
 
@@ -30,31 +30,31 @@ const MovieRegister = () => {
         <table className='tab_layer'>
             
                 <tr>
-                    <td>ID</td>
+                    <td>MOVIEID</td>
                     <td><input type="text" onChange={e => setMovieid(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>PASSWORD</td>
+                    <td>TITLE</td>
                     <td><input type="text" onChange={e => setTitle(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>NAME</td>
-                    <td><input type="text" onChange={e => setSubTitle(e.target.value)}/></td>
+                    <td>SUBTITLE</td>
+                    <td><input type="text" onChange={e => setSubtitle(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>PCLASS</td>
+                    <td>DESCRIPTION</td>
                     <td><input type="text" onChange={e => setDescription(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>GENDER</td>
-                    <td><input type="text" onChange={e => setImageUrl(e.target.value)}/></td>
+                    <td>IMAGEURL</td>
+                    <td><input type="text" onChange={e => setImageurl(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>BIRTH YEAR</td>
+                    <td>YEAR</td>
                     <td><input type="text" onChange={e => setYear(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>EMBARKED</td>
+                    <td>RATING</td>
                     <td><input type="text" onChange={e => setRating(e.target.value)}/></td>
                 </tr>
                 {/* <tr>

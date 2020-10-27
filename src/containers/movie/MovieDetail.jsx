@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import {User} from '../../templates'
+import {Movie} from '../../templates'
 import axios from 'axios'
-const UserDetail = () => {
+export default function MovieDetail() {
     const detail = e => {
         e.preventDefault()
-        axios.get(`http:localhost:8080/user/detail`)
+        axios.get(`http:localhost:8080/movie/detail`)
         .then(
 
         )
@@ -13,8 +13,8 @@ const UserDetail = () => {
         )
 
     }
-    return (<User>
-        <h1>UserDetail</h1>
+    return (<Movie>
+        <h1>MovieDetail</h1>
         <form>
         <table className='tab_layer'>
             
@@ -55,7 +55,5 @@ const UserDetail = () => {
                     <button>취소</button></td>
                 </tr>
         </table></form>
-    </User>)
+    </Movie>)
 }
-
-export default UserDetail

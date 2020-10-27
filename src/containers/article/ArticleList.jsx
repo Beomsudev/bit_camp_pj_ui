@@ -1,8 +1,8 @@
 import React from 'react'
-import {Review} from '../../templates'
+import {Article} from '../../templates'
 
-const ReviewList = () => {
-    return (<Review>
+const ArticleList = () => {
+    return (<Article>
         <table>
             <tr>
                 <td></td>
@@ -20,7 +20,7 @@ const ReviewList = () => {
                 <td></td>
             </tr>
         </table>
-    </Review>)
+    </Article>)
 }
 
-export default ReviewList
+export default ArticleList

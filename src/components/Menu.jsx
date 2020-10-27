@@ -10,12 +10,21 @@ export const UserMenu = () => (<nav>
         </ol>
     </nav>)
 
-export const ReviewMenu = () =>(<nav>
+export const MovieMenu = () => (<nav>
     <ol>
-        <li><Link to='/write-review'>Writing Review Form</Link></li> 
-        <li><Link to='/review-list'>Review List</Link></li> 
-        <li><Link to='/edit-review'>Update Review Form</Link></li> 
-        <li><Link to='/delete-review'>Delete Review Form</Link></li> 
+        <li><Link to='/movie-detail'>Movie</Link></li>
+        <li><Link to='/modify-movie'>Modify Movie</Link></li>
+        <li><Link to='/remove-movie'>Remove Movie</Link></li>
+        <li><Link to='/movie-list'>Movie List</Link></li>
+    </ol>
+</nav>)
+
+export const ArticleMenu = () =>(<nav>
+    <ol>
+        <li><Link to='/article-write-form'>Writing Article Form</Link></li> 
+        <li><Link to='/article-list'>Article List</Link></li> 
+        <li><Link to='/edit-article'>Update Article Form</Link></li> 
+        <li><Link to='/delete-article'>Delete Article Form</Link></li> 
     </ol>
 </nav>)
 
@@ -28,14 +37,6 @@ export const ItemMenu = () => (<nav>
     </ol>
 </nav>)
 
-export const MovieMenu = () => (<nav>
-    <ol>
-        <li><Link to='/moviedetail'>Movie</Link></li>
-        <li><Link to='/modify-movie'>Modify Movie</Link></li>
-        <li><Link to='/remove-movie'>Remove Movie</Link></li>
-        <li><Link to='/movielist'>Movie List</Link></li>
-    </ol>
-</nav>)
 export const AuthMenu = () => (<nav>
     <ol>
         <li><Link to='/signup-form'>Siginup Form</Link></li>

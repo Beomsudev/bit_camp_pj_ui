@@ -2,18 +2,18 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import { Link, useHistory } from "react-router-dom";
 
-const UserLogin = () => {
-    const [userid, setUserid] = useState('')
+export default function UserLogin() {
+    const [userId, setUserId] = useState('')
     const [password, setPassword] = useState('')
     
     const history = useHistory();
     const login = e => {
         e.preventDefault()
-        axios.post(`http://localhost:8080/api/access`, {userid, password})
+        axios.post(`http://localhost:8080/api/access`, {userId, password})
             .then(res => {
-                alert(`Welcome ! ${res.data["name"]}.  ${res.data["userid"]}'s connection is successful. ! `)
+                alert(`Welcome ! ${res.data["name"]}.  ${res.data["userId"]}'s connection is successful. ! `)
 
-                sessionStorage.setItem("sessionUser", res.data['userid']);
+                sessionStorage.setItem("sessionUser", res.data['userId']);
                 window.location.reload()
                 history.push("/home");
                 
@@ -34,7 +34,7 @@ const UserLogin = () => {
        
         <tr>
             <td>ID : </td>
-            <td><input type="text" onChange={e => setUserid(`${e.target.value}`)}/></td>
+            <td><input type="text" onChange={e => setUserId(`${e.target.value}`)}/></td>
         </tr>
         <tr>
             <td> PW : </td>
@@ -49,5 +49,4 @@ const UserLogin = () => {
        
     </table> </form>
     </>)
-    }
-export default UserLogin
+ }

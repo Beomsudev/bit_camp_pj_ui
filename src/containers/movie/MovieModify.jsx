@@ -19,7 +19,7 @@ const MovieModify = () => {
         <table className='tab_layer'>
            
                 <tr>
-                    <td>MOVIEID</td>
+                    <td>ID</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
@@ -27,27 +27,27 @@ const MovieModify = () => {
                     <td><input type="text" onChange={e => setPassword(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>TITLE</td>
+                    <td>NAME</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>SUBTITLE</td>
+                    <td>PCLASS</td>
                     <td><input type="text"/></td>
                 </tr>
                 <tr>
-                    <td>DESCRIPTION</td>
+                    <td>GENDER</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>IMAGEURL</td>
+                    <td>BIRTH YEAR</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>YEAR</td>
+                    <td>EMBARKED</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>
-                    <td>RATING</td>
+                    <td>RANK</td>
                     <td><input type="text" /></td>
                 </tr>
                 <tr>

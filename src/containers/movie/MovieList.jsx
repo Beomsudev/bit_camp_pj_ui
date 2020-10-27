@@ -1,11 +1,12 @@
 import React , {useEffect, useState} from 'react'
 import axios from 'axios'
 import {Movie} from '../../templates'
+import {Link} from 'react-router-dom'
 
-const MovieList = () => {
+export default function MovieList(){
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/movies`)
+        axios.get(`http://127.0.0.1:8080/api/movies`)
         .then(res=>{
             alert(`List Success`)
             setData(res.data)
@@ -32,6 +33,7 @@ const MovieList = () => {
             </tr>
             {data.map((i, index)=>(
                 <tr key={index}>
+                {/* <td><Link to=''>{i.movieid}</Link></td> */}
                 <td>{i.movieid}</td>
                 <td>{i.title}</td>
                 <td>{i.subtitle}</td>
@@ -46,5 +48,3 @@ const MovieList = () => {
 
     </Movie>)
 }
-
-export default MovieList

@@ -18,9 +18,9 @@ const Nav = props => {
             ? <ul>
                 <li><Link to='/home'>Home</Link></li>
                 <li><Link to='/user'>User</Link></li>
-                <li><Link to='/item'>Item</Link></li>
                 <li><Link to='/movie'>Movie</Link></li>
-                <li><Link to='/review'>Review</Link></li>
+                <li><Link to='/item'>Item</Link></li>
+                <li><Link to='/article'>Board</Link></li>
                 <li onClick={logout} style={{textDecoration:'underline'}}>Logout</li>
             </ul>:
             <ul>
