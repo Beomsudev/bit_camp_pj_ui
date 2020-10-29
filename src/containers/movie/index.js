@@ -1,5 +1,5 @@
 export {default as MovieDetail} from './MovieDetail'
-export {default as MovieModify} from './MovieModify'
 export {default as MovieRegister} from './MovieRegister'
-export {default as MovieDelete} from './MovieDelete'
 export {default as MovieList} from './MovieList'
+export {default as MovieModify} from './MovieModify'
+export {default as MovieRemove} from './MovieRemove'

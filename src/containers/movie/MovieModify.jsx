@@ -11,6 +11,7 @@ const MovieModify = () => {
     const [imageurl, setImageurl] = useState('')
     const [year, setYear] = useState('')
     const [rating, setRating] = useState('')
+
     const modify = () => {
         axios.put(`http://127.0.0.1:8080/api/movie`,{'movieid':movieid,
         'title': title, 'subtitle': subtitle, 'description': description, 'imageurl': imageurl, 'year': year, 'rating': rating})
@@ -55,7 +56,7 @@ const MovieModify = () => {
                     <td> <input type="text" onChange={e => setRating(e.target.value)}/></td>
                 </tr>
                 <tr colspan={2}>
-                    <button type="button" class="btn btn-sm btn-primary" id="btnModify" onClick={modify}> MODIFY </button>
+                    <button type="button" class="btn btn-sm btn-primary" id="btnModify" onClick={modify}>MODIFY</button>
                     <button>cancel</button>
                 </tr>
            

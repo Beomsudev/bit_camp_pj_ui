@@ -13,10 +13,10 @@ export const UserMenu = () => (<nav>
 export const MovieMenu = () => (<nav>
     <ol>
         <li><Link to='/movie-detail'>Movie</Link></li>
-        <li><Link to='/register-movie'>Register Movie</Link></li>
-        <li><Link to='/modify-movie'>Modify Movie</Link></li>
-        <li><Link to='/remove-movie'>Remove Movie</Link></li>
+        <li><Link to='/movie-register'>Movie Register</Link></li>
         <li><Link to='/movie-list'>Movie List</Link></li>
+        <li><Link to='/movie-modify'>Movie Modify</Link></li>
+        <li><Link to='/movie-remove'>Movie Remove</Link></li>
     </ol>
 </nav>)
 

@@ -59,8 +59,8 @@ const MovieRegister = () => {
                 
                 <tr>
                     <td colspan={2}>
-                        <button type="button" class="btn btn-sm btn-primary" id="btnSave" onClick={register}> Register </button>
-                        <button>Cancel</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="btnSave" onClick={register}>REGISTER</button>
+                        <button>CANCEL</button>
                     </td>
                 </tr>
             </table>

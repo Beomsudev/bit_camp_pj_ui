@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import { Movie } from '../../templates'
 
-const MovieDelete = () => {
+const MovieRemove = () => {
     const [movieid, setMovieid] = useState('')
 
 
@@ -20,7 +20,7 @@ const MovieDelete = () => {
 
     
     return (<Movie>
-        <h1>MovieDelete</h1>
+        <h1>MovieRemove</h1>
         <form>
             <table className='tab_layer'>
                 <tr>
@@ -38,4 +38,4 @@ const MovieDelete = () => {
     </Movie>)
 }
 
-export default MovieDelete
+export default MovieRemove
