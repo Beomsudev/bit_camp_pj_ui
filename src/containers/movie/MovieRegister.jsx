@@ -1,33 +1,32 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import { Movie } from '../../templates'
 
 const MovieRegister = () => {
-    const [movieid, setMovieid] = useState()
-    const [title, setTitle] = useState()
-    const [subtitle, setSubtitle] = useState()
-    const [description, setDescription] = useState()
-    const [imageurl, setImageurl] = useState()
-    const [year, setYear] = useState()
-    const [rating, setRating] = useState()
+    const [movieid, setMovieid] = useState('')
+    const [title, setTitle] = useState('')
+    const [subtitle, setSubtitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [imageurl, setImageurl] = useState('')
+    const [year, setYear] = useState('')
+    const [rating, setRating] = useState('')
 
-    const register = e => {
-        e.preventDefault()
-        axios.post(`http:localhost:8080/movie/register`,  {
-            movieid,title,subtitle,description,imageurl,year,rating
+    const register = () => {
+        axios.post(`http://127.0.0.1:8080/api/movie`,{'movieid':movieid,
+        'title': title, 'subtitle': subtitle, 'description': description, 'imageurl': imageurl, 'year': year, 'rating': rating})
+        .then(res => {
+            alert(`REGISTER SUCCESS`)
         })
-        .then(
-            console.log(`signup SUCCESS`)
-        )
-        .error(
-            console.log(`signup FAIL`)
-        )
+        .catch(e => {
+            alert(`REGISTER FAIL${e}`)    
+        })
 
     }
 
     
-    return (<>
-        <h1>MovieRegister</h1><form>
-        <table className='tab_layer'>
+    return (<Movie>
+        <h1>MovieRegister</h1>
+        <form><table className='tab_layer'>
             
                 <tr>
                     <td>MOVIEID</td>
@@ -57,17 +56,16 @@ const MovieRegister = () => {
                     <td>RATING</td>
                     <td><input type="text" onChange={e => setRating(e.target.value)}/></td>
                 </tr>
-                {/* <tr>
-                    <td>RANK</td> 
-                    <td>Do not enter ratings..</td>
-                </tr> */}
+                
                 <tr>
-                    <td colspan={2}><button onClick={register}>Register</button>
-                    <button>Cancel</button></td>
+                    <td colspan={2}>
+                    <button type="button" class="btn btn-sm btn-primary" id="btnSave" onClick={register}> Register </button>
+                    <button>Cancel</button>
+                    </td>
                 </tr>
             
         </table></form>
-    </>)
+    </Movie>)
 }
 
 export default MovieRegister
