@@ -26,8 +26,8 @@ const MovieRegister = () => {
     
     return (<Movie>
         <h1>MovieRegister</h1>
-        <form><table className='tab_layer'>
-            
+        <form>
+            <table className='tab_layer'>
                 <tr>
                     <td>MOVIEID</td>
                     <td><input type="text" onChange={e => setMovieid(e.target.value)}/></td>
@@ -59,12 +59,12 @@ const MovieRegister = () => {
                 
                 <tr>
                     <td colspan={2}>
-                    <button type="button" class="btn btn-sm btn-primary" id="btnSave" onClick={register}> Register </button>
-                    <button>Cancel</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="btnSave" onClick={register}> Register </button>
+                        <button>Cancel</button>
                     </td>
                 </tr>
-            
-        </table></form>
+            </table>
+        </form>
     </Movie>)
 }
 

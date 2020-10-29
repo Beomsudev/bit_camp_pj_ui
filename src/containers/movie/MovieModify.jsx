@@ -1,61 +1,66 @@
 import React, {useState} from 'react'
 import {Movie} from '../../templates'
 import axios from 'axios'
-const MovieModify = () => {
-    const [password, setPassword] = useState()
-    const modify = e => {
-        e.preventDefault()
-        axios.get(`http:localhost:8080/movie/modify`)
-        .then(
 
-        )
-        .error(
-            
-        )
+// movieid,title,subtitle,description,imageurl,year,rating
+const MovieModify = () => {
+    const [movieid, setMovieId] = useState('')
+    const [title, setTitle] = useState('')
+    const [subtitle, setSubTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [imageurl, setImageurl] = useState('')
+    const [year, setYear] = useState('')
+    const [rating, setRating] = useState('')
+    const modify = () => {
+        axios.put(`http://127.0.0.1:8080/api/movie`,{'movieid':movieid,
+        'title': title, 'subtitle': subtitle, 'description': description, 'imageurl': imageurl, 'year': year, 'rating': rating})
+        .then(res => {
+            alert(`REGISTER SUCCESS`)
+        })
+        .catch(e => {
+            alert(`REGISTER FAIL${e}`)    
+        })
 
     }
     return (<Movie>
-        <h1>MovieModify</h1> <form>
-        <table className='tab_layer'>
-           
+        <h1>MovieModify</h1>
+        <form>
+            <table className='tab_layer'>
                 <tr>
-                    <td>ID</td>
-                    <td><input type="text"/></td>
+                    <td>MOVIEID</td>
+                    <td> <input type="text" onChange={e => setMovieId(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>PASSWORD</td>
-                    <td><input type="text" onChange={e => setPassword(e.target.value)}/></td>
+                    <td>TITLE</td>
+                    <td> <input type="text" onChange={e => setTitle(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>NAME</td>
-                    <td><input type="text" /></td>
+                    <td>SUBTITLE</td>
+                    <td> <input type="text" onChange={e => setSubTitle(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>PCLASS</td>
-                    <td><input type="text"/></td>
+                    <td>DESCRIPTION</td>
+                    <td> <input type="text" onChange={e => setDescription(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>GENDER</td>
-                    <td><input type="text" /></td>
+                    <td>IMAGEURL</td>
+                    <td> <input type="text" onChange={e => setImageurl(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>BIRTH YEAR</td>
-                    <td><input type="text" /></td>
+                    <td>YEAR</td>
+                    <td> <input type="text" onChange={e => setYear(e.target.value)}/></td>
                 </tr>
                 <tr>
-                    <td>EMBARKED</td>
-                    <td><input type="text" /></td>
+                    <td>RATING</td>
+                    <td> <input type="text" onChange={e => setRating(e.target.value)}/></td>
                 </tr>
-                <tr>
-                    <td>RANK</td>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <td colspan={2}><button onClick={modify}>Modify</button>
-                    <button>Cancel</button></td>
+                <tr colspan={2}>
+                    <button type="button" class="btn btn-sm btn-primary" id="btnModify" onClick={modify}> MODIFY </button>
+                    <button>cancel</button>
                 </tr>
            
-        </table> </form>
+            </table>
+        </form>
     </Movie>)
 }
 
