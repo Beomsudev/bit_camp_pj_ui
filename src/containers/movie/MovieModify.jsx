@@ -15,10 +15,10 @@ const MovieModify = () => {
         axios.put(`http://127.0.0.1:8080/api/movie`,{'movieid':movieid,
         'title': title, 'subtitle': subtitle, 'description': description, 'imageurl': imageurl, 'year': year, 'rating': rating})
         .then(res => {
-            alert(`REGISTER SUCCESS`)
+            alert(`MODIFY SUCCESS`)
         })
         .catch(e => {
-            alert(`REGISTER FAIL${e}`)    
+            alert(`MODIFY FAIL${e}`)    
         })
 
     }

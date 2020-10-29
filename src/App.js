@@ -4,7 +4,7 @@ import {Nav} from './components'
 import {ItemDetail, ItemList, ModifyItem, RegisterItem, RemoveItem } from './containers/item'
 import {UserRegister, UserLogin, UserDetail, UserModify, UserWithdrawal, UserList} from './containers/user'
 import {ArticleList, EditArticle, ReadArticle, RemoveArticle, ArticleWriteForm} from './containers/article'
-import {MovieDetail, MovieList, MovieModify, MovieRegister, MovieWithdrawal} from './containers/movie'
+import {MovieDetail, MovieList, MovieModify, MovieRegister, MovieDelete} from './containers/movie'
 import {Home, User, Movie, Article, Item} from './templates'
 import { createStore, applyMiddleware, combineReducers} from 'redux'
 import {Provider} from'react-redux'
@@ -38,7 +38,7 @@ export default function App(){
                 <Route path='/movie-detail' component={MovieDetail}/>
                 <Route path='/modify-movie' component={MovieModify}/>
                 <Route path='/register-movie' component={MovieRegister}/>
-                <Route path='/remove-movie' component={MovieWithdrawal}/>                
+                <Route path='/remove-movie' component={MovieDelete}/>                
                 <Route path='/item' component={Item}></Route>
                 <Route path='/item-list' component={ItemList}/>
                 <Route path='/item-detail' component={ItemDetail}/>

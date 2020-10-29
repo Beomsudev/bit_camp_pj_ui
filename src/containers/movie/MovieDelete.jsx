@@ -2,24 +2,25 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import { Movie } from '../../templates'
 
-const MovieWithdrawal = () => {
+const MovieDelete = () => {
     const [movieid, setMovieid] = useState('')
 
 
     const del = () => {
-        axios.delete(`http://127.0.0.1:8080/api/movie`,{'movieid':movieid})
+        alert(`DELETE MOVIE ID : ${movieid}`)
+        axios.post(`http://127.0.0.1:8080/api/moviedel`,{'movieid':movieid})
         .then(res => {
-            alert(`REGISTER SUCCESS`)
+            alert(`DELETE SUCCESS`)
         })
         .catch(e => {
-            alert(`REGISTER FAIL${e}`)
+            alert(`DELETE FAIL ${e}`)
         })
 
     }
 
     
     return (<Movie>
-        <h1>MovieWithdrawal</h1>
+        <h1>MovieDelete</h1>
         <form>
             <table className='tab_layer'>
                 <tr>
@@ -37,4 +38,4 @@ const MovieWithdrawal = () => {
     </Movie>)
 }
 
-export default MovieWithdrawal
+export default MovieDelete
