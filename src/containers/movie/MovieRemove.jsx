@@ -29,8 +29,8 @@ const MovieRemove = () => {
                 </tr>
                 <tr>
                     <td colspan={2}>
-                        <button type="button" class="btn btn-sm btn-primary" id="btnSave" onClick={del}> DELETE </button>
-                        <button>Cancel</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="btnDelete" onClick={del}>DELETE</button>
+                        <button>CANCEL</button>
                     </td>
                 </tr>
             </table>

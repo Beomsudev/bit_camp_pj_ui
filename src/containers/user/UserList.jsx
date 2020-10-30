@@ -33,7 +33,7 @@ export default function UserList(){
             </tr>
             {data.map((i, index)=>(
                 <tr key={index}>
-                <td><Link to=''>{i.userid}</Link></td>
+                <td><Link to=''>{i.user_id}</Link></td>
                 <td>{i.name}</td>
                 <td>{i.pclass}</td>
                 <td>{i.gender}</td>

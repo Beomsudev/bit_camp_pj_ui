@@ -33,7 +33,6 @@ export default function MovieList(){
             </tr>
             {data.map((i, index)=>(
                 <tr key={index}>
-                {/* <td><Link to=''>{i.movieid}</Link></td> */}
                 <td>{i.movieid}</td>
                 <td>{i.title}</td>
                 <td>{i.subtitle}</td>
