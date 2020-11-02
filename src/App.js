@@ -4,8 +4,9 @@ import {Nav} from './components'
 import {ItemDetail, ItemList, ModifyItem, RegisterItem, RemoveItem } from './containers/item'
 import {UserRegister, UserLogin, UserDetail, UserModify, UserWithdrawal, UserList} from './containers/user'
 import {ArticleList, EditArticle, ReadArticle, RemoveArticle, ArticleWriteForm} from './containers/article'
-import {MovieDetail, MovieList, MovieModify, MovieRegister, MovieRemove} from './containers/movie'
-import {Home, User, Movie, Article, Item} from './templates'
+import {MovieDetail, MovieList, MovieSearch, MovieModify, MovieRegister, MovieRemove} from './containers/movie'
+import {RecoMovieDetail, RecoMovieList, RecoMovieSearch, RecoMovieModify, RecoMovieRegister, RecoMovieRemove} from './containers/recomovie'
+import {Home, User, Movie, RecoMovie, Article, Item} from './templates'
 import { createStore, applyMiddleware, combineReducers} from 'redux'
 import {Provider} from'react-redux'
 import {itemReducer } from './containers/item/ItemList'
@@ -37,8 +38,16 @@ export default function App(){
                 <Route path='/movie-detail' component={MovieDetail}/>
                 <Route path='/movie-register' component={MovieRegister}/>
                 <Route path='/movie-list' component={MovieList}/>
+                <Route path='/movie-search' component={MovieSearch}/>
                 <Route path='/movie-modify' component={MovieModify}/>
                 <Route path='/movie-remove' component={MovieRemove}/>                
+                <Route path='/recomovie' component={RecoMovie}/>
+                <Route path='/recomovie-detail' component={RecoMovieDetail}/>
+                <Route path='/recomovie-register' component={RecoMovieRegister}/>
+                <Route path='/recomovie-list' component={RecoMovieList}/>
+                <Route path='/recomovie-search' component={RecoMovieSearch}/>
+                <Route path='/recomovie-modify' component={RecoMovieModify}/>
+                <Route path='/recomovie-remove' component={RecoMovieRemove}/>                
                 <Route path='/item' component={Item}></Route>
                 <Route path='/item-list' component={ItemList}/>
                 <Route path='/item-detail' component={ItemDetail}/>

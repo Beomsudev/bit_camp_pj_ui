@@ -15,8 +15,20 @@ export const MovieMenu = () => (<nav>
         <li><Link to='/movie-detail'>Movie</Link></li>
         <li><Link to='/movie-register'>Movie Register</Link></li>
         <li><Link to='/movie-list'>Movie List</Link></li>
+        <li><Link to='/movie-search'>Movie SEARCH</Link></li>
         <li><Link to='/movie-modify'>Movie Modify</Link></li>
         <li><Link to='/movie-remove'>Movie Remove</Link></li>
+    </ol>
+</nav>)
+
+export const RecoMovieMenu = () => (<nav>
+    <ol>
+        <li><Link to='/recomovie-detail'>RecoMovie</Link></li>
+        <li><Link to='/recomovie-register'>RecoMovie Register</Link></li>
+        <li><Link to='/recomovie-list'>RecoMovie List</Link></li>
+        <li><Link to='/recomovie-search'>RecoMovie Search</Link></li>
+        <li><Link to='/recomovie-modify'>RecoMovie Modify</Link></li>
+        <li><Link to='/recomovie-remove'>RecoMovie Remove</Link></li>
     </ol>
 </nav>)
 
