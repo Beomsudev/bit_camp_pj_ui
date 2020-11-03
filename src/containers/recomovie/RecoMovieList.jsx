@@ -1,7 +1,8 @@
-import React , {useEffect, useState} from 'react'
+import React , {useCallback ,useEffect, useState} from 'react'
 import axios from 'axios'
 import {RecoMovie} from '../../templates'
-import {Link} from 'react-router-dom'
+import {context as c} from '../../context'
+
 
 export default function RecoMovieList(){
     const [data, setData] = useState([])
@@ -17,11 +18,33 @@ export default function RecoMovieList(){
         })
 
     },[])
-    
+
+    const fetchSomeMovie = useCallback(async e=> {
+        alert("진입")
+        const title = document.querySelector('#Title').value
+        alert(title)
+        try {
+            const req = {
+                method: c.get,
+                url: `${c.url}/api/recomoviesearch/${title}`,
+                // data: {params: title},
+                auth: c.auth
+
+            }
+            const res = await axios(req)
+            alert(res.rev_id)
+            setData(res.data)
+        } catch (error){
+            alert(`fetchSomeReviews failure ${error}`)
+        }
+    },[])
+
     return (<RecoMovie>
   
         <table>
             <h1>RecoMovie List</h1>
+            Search : <input type="text" id='Title'/> 
+            <button onClick={fetchSomeMovie}>Search</button>
             <tr>
                 <th>movieid</th>
                 <th>movie_l_title</th>
