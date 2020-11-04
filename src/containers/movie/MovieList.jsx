@@ -2,7 +2,11 @@ import React , {useCallback, useEffect, useState} from 'react'
 import axios from 'axios'
 import {Movie} from '../../templates'
 import {context as c} from '../../context'
+import {useHistory} from 'react-router-dom'
+
 export default function MovieList(){
+    const history = useHistory()
+
     // const [movie, setMovie] = useState()
     // const [movies, setMovies] = useState()
     // const bulk = useCallback(async e => {
@@ -22,7 +26,7 @@ export default function MovieList(){
     
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/movies`)
+        axios.get(`http://localhost:8080/api/movie-ratings`)
         .then(res=>{
             // alert(`List Success`)
             setData(res.data)
@@ -42,7 +46,7 @@ export default function MovieList(){
         try {
             const req = {
                 method: c.get,
-                url: `${c.url}/api/moviesearch/${title}`,
+                url: `${c.url}/api/movie-rating-search/${title}`,
                 // data: {params: title},
                 auth: c.auth
 
@@ -77,22 +81,16 @@ export default function MovieList(){
 
             <h1>Movie List</h1>
             <tr>
+                <th>ratingid</th>
+                <th>userid</th>
                 <th>movieid</th>
-                <th>title</th>
-                <th>subtitle</th>
-                <th>description</th>
-                <th>imageurl</th>
-                <th>year</th>
                 <th>rating</th>
             </tr>
             {data.map((i, index)=>(
                 <tr key={index}>
+                <td>{i.ratingid}</td>
+                <td>{i.userid}</td>
                 <td>{i.movieid}</td>
-                <td>{i.title}</td>
-                <td>{i.subtitle}</td>
-                <td>{i.description}</td>
-                <td>{i.imageurl}</td>
-                <td>{i.year}</td>
                 <td>{i.rating}</td>
             </tr>
             ))}
