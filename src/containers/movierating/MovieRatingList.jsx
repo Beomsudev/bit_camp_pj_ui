@@ -40,7 +40,7 @@ export default function MovieRatingList(){
 
         <table>
           Search : <input type="text" id='Ratingid'/> 
-          <button onClick={fetchSomeRating}>Search</button>
+          <button type="button" class="btn btn-sm btn-primary" id="btnModify" onClick={fetchSomeRating}>Search</button>
 
             <h1>Rating List</h1>
             <tr>
