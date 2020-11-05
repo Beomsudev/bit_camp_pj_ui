@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import {Movie} from '../../templates'
+import {MovieRating} from '../../templates'
 import axios from 'axios'
-export default function MovieDetail() {
+export default function MovieRatingDetail() {
     const detail = e => {
         e.preventDefault()
-        axios.get(`http:localhost:8080/movie/detail`)
+        axios.get(`http:127.0.0.1:8080/movie/detail`)
         .then(
 
         )
@@ -13,7 +13,7 @@ export default function MovieDetail() {
         )
 
     }
-    return (<Movie>
+    return (<MovieRating>
         <h1>MovieDetail</h1>
         <form>
         <table className='tab_layer'>
@@ -55,5 +55,5 @@ export default function MovieDetail() {
                     <button>취소</button></td>
                 </tr>
         </table></form>
-    </Movie>)
+    </MovieRating>)
 }

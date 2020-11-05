@@ -4,9 +4,9 @@ import {Nav} from './components'
 import {ItemDetail, ItemList, ModifyItem, RegisterItem, RemoveItem } from './containers/item'
 import {UserRegister, UserLogin, UserDetail, UserModify, UserWithdrawal, UserList} from './containers/user'
 import {ArticleList, EditArticle, ReadArticle, RemoveArticle, ArticleWriteForm} from './containers/article'
-import {MovieDetail, MovieList, MovieSearch, MovieModify, MovieRegister, MovieRemove} from './containers/movie'
-import {RecoMovieDetail, RecoMovieList, RecoMovieSearch, RecoMovieModify, RecoMovieRegister, RecoMovieRemove} from './containers/recomovie'
-import {Home, User, Movie, RecoMovie, Article, Item} from './templates'
+import {MovieRatingDetail, MovieRatingList, MovieRatingModify, MovieRatingRegister, MovieRatingRemove} from './containers/movierating'
+import {RecoMovieDetail, RecoMovieList, RecoMovieModify, RecoMovieRegister, RecoMovieRemove} from './containers/recomovie'
+import {Home, User, MovieRating, RecoMovie, Article, Item} from './templates'
 import { createStore, applyMiddleware, combineReducers} from 'redux'
 import {Provider} from'react-redux'
 import {itemReducer } from './containers/item/ItemList'
@@ -34,18 +34,16 @@ export default function App(){
                 <Route path='/modifying-user-info' component={UserModify}/>
                 <Route path='/membership-withdrawal' component={UserWithdrawal}/>
                 <Route path='/userlist' component={UserList}/>
-                <Route path='/movie' component={Movie}/>
-                <Route path='/movie-detail' component={MovieDetail}/>
-                <Route path='/movie-register' component={MovieRegister}/>
-                <Route path='/movie-list' component={MovieList}/>
-                <Route path='/movie-search' component={MovieSearch}/>
-                <Route path='/movie-modify' component={MovieModify}/>
-                <Route path='/movie-remove' component={MovieRemove}/>                
+                <Route path='/movie-rating' component={MovieRating}/>
+                <Route path='/movie-rating-detail' component={MovieRatingDetail}/>
+                <Route path='/movie-rating-register' component={MovieRatingRegister}/>
+                <Route path='/movie-rating-list' component={MovieRatingList}/>
+                <Route path='/movie-rating-modify' component={MovieRatingModify}/>
+                <Route path='/movie-rating-remove' component={MovieRatingRemove}/>                
                 <Route path='/recomovie' component={RecoMovie}/>
                 <Route path='/recomovie-detail' component={RecoMovieDetail}/>
                 <Route path='/recomovie-register' component={RecoMovieRegister}/>
                 <Route path='/recomovie-list' component={RecoMovieList}/>
-                <Route path='/recomovie-search' component={RecoMovieSearch}/>
                 <Route path='/recomovie-modify' component={RecoMovieModify}/>
                 <Route path='/recomovie-remove' component={RecoMovieRemove}/>                
                 <Route path='/item' component={Item}></Route>

@@ -18,7 +18,7 @@ const Nav = props => {
             ? <ul>
                 <li><Link to='/home'>Home</Link></li>
                 <li><Link to='/user'>User</Link></li>
-                <li><Link to='/movie'>Movie</Link></li>
+                <li><Link to='/movie-rating'>MovieRating</Link></li>
                 <li><Link to='/recomovie'>RecoMovie</Link></li>
                 <li><Link to='/item'>Item</Link></li>
                 <li><Link to='/article'>Board</Link></li>

@@ -33,7 +33,7 @@ export default function RecoMovieList(){
             const res = await axios(req)
             setData(res.data)
         } catch (error){
-            alert(`fetchSomeReviews failure ${error}`)
+            alert(`The value could not be found. ${error}`)
         }
     },[])
 

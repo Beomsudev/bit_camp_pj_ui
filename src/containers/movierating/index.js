@@ -1,0 +1,5 @@
+export {default as MovieRatingDetail} from './MovieRatingDetail'
+export {default as MovieRatingRegister} from './MovieRatingRegister'
+export {default as MovieRatingList} from './MovieRatingList'
+export {default as MovieRatingModify} from './MovieRatingModify'
+export {default as MovieRatingRemove} from './MovieRatingRemove'

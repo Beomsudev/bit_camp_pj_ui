@@ -1,14 +1,13 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import { Movie } from '../../templates'
+import { MovieRating } from '../../templates'
 
-const MovieRemove = () => {
-    const [movieid, setMovieid] = useState('')
-
+const MovieRatingRemove = () => {
+    const [ratingid, setRatingid] = useState('')
 
     const del = () => {
-        alert(`DELETE MOVIE ID : ${movieid}`)
-        axios.post(`http://127.0.0.1:8080/api/moviedel`,{'movieid':movieid})
+        alert(`DELETE MOVIE ID : ${ratingid}`)
+        axios.post(`http://127.0.0.1:8080/api/movie-rating-del`,{'ratingid':ratingid})
         .then(res => {
             alert(`DELETE SUCCESS`)
         })
@@ -19,13 +18,13 @@ const MovieRemove = () => {
     }
 
     
-    return (<Movie>
-        <h1>MovieRemove</h1>
+    return (<MovieRating>
+        <h1>MovieRatingRemove</h1>
         <form>
             <table className='tab_layer'>
                 <tr>
-                    <td>MOVIEID</td>
-                    <td><input type="text" onChange={e => setMovieid(e.target.value)}/></td>
+                    <td>RATINGID</td>
+                    <td><input type="text" onChange={e => setRatingid(e.target.value)}/></td>
                 </tr>
                 <tr>
                     <td colspan={2}>
@@ -35,7 +34,7 @@ const MovieRemove = () => {
                 </tr>
             </table>
         </form>
-    </Movie>)
+    </MovieRating>)
 }
 
-export default MovieRemove
+export default MovieRatingRemove

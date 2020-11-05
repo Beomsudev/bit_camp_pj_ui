@@ -4,7 +4,7 @@ import axios from 'axios'
 export default function RecoMovieDetail() {
     const detail = e => {
         e.preventDefault()
-        axios.get(`http:localhost:8080/recomovie/detail`)
+        axios.get(`http:127.0.0.1:8080/recomovie/detail`)
         .then(
 
         )
