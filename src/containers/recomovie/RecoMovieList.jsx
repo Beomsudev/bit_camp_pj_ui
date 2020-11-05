@@ -42,7 +42,7 @@ export default function RecoMovieList(){
         <table>
             <h1>RecoMovie List</h1>
             제목 검색 : <input type="text" id='Title'/> 
-            <button type="button" class="btn btn-sm btn-primary" id="btnModify" onClick={fetchSomeMovie}>Search</button>
+            <button onClick={fetchSomeMovie}>Search</button>
             <tr>
                 <th>movieid</th>
                 <th>title_kor</th>
